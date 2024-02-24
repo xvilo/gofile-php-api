@@ -8,6 +8,11 @@
       "Xvilo\\GoFile\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Xvilo\\GoFile\\Tests": "tests/"
+    }
+  },
   "require": {
     "php": "^8.1",
     "php-http/client-common": "^2.6",
