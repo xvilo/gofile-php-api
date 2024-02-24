@@ -1,0 +1,32 @@
+{
+  "name": "xvilo/gofile-php-api",
+  "description": "GoFile API Client in PHP",
+  "license": "Apache-2.0",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Xvilo\\GoFile\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "php-http/client-common": "^2.6",
+    "php-http/discovery": "^1.14",
+    "symfony/serializer": "^5.4 || ^6.4 || ^7.0"
+  },
+  "require-dev": {
+    "nyholm/psr7": "^1.5",
+    "symfony/var-dumper": "^5.4 || ^6.4 || ^7.0",
+    "symfony/http-client": "^5.4 || ^6.4 || ^7.0",
+    "phpunit/phpunit": "^10.0",
+    "friendsofphp/php-cs-fixer": "^3.13",
+    "rector/rector": "^1.0",
+    "phpstan/phpstan": "^1.10"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    },
+    "platform-check": false
+  }
+}
