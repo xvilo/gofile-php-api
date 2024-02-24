@@ -10,6 +10,7 @@ use Http\Client\Common\Plugin\HeaderAppendPlugin;
 use Http\Client\Common\Plugin\RedirectPlugin;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Xvilo\GoFile\Api\AccountApi;
+use Xvilo\GoFile\Api\MetaApi;
 use Xvilo\GoFile\HttpClient\HttpClientBuilder;
 
 class Client
@@ -19,6 +20,8 @@ class Client
 
     public readonly AccountApi $account;
 
+    public readonly MetaApi $meta;
+
     public function __construct(
         private readonly HttpClientBuilder $httpClientBuilder = new HttpClientBuilder(),
         private readonly string $baseHost = 'https://api.gofile.io',
@@ -26,6 +29,7 @@ class Client
     ) {
         $this->setupHttpBuilder();
         $this->account = new AccountApi($this);
+        $this->meta = new MetaApi($this);
     }
 
     private function setupHttpBuilder(): void
